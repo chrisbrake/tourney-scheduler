@@ -43,11 +43,24 @@ All other objects are children of the Event.
         "properties": {
             "id": { "type": "string", "example": "1" },
             "name": { "type": "string", "example": "Ambition" },
+            "location": { "type": "string", "example": "Room 1" },
             "keepers": { "type": "array", "items": { "$ref": "#/definitions/Keeper" }, "default": [] },
             "competitors": { "type": "array", "items": { "$ref": "#/definitions/Competitor" }, "default": [] },
             "organizers": { "type": "array", "items": { "$ref": "#/definitions/Organizer" }, "default": [] },
+            "teams": { "type": "array", "items": { "$ref": "#/definitions/Team" }, "default": [] },
 
         }
+    },
+    "Team": {
+        "type": "object",
+        "properties": {
+            "type": "object",
+            "id": { "type": "string", "example": "1" },
+            "name": { "type": "string", "example": "Win Machines" },
+            "competitors": { "type": "array", "items": { "$ref": "#/definitions/Competitor" }, "default": [] },
+            "event": { "$ref": "#/definitions/Event" },
+        }
+    },
     },
     "Keeper": {
         "type": "object",
@@ -63,8 +76,9 @@ All other objects are children of the Event.
         "properties": {
             "type": "object",
             "id": { "type": "string", "example": "1" },
-            "name": { "type": "string", "example": "John" },
+            "name": { "type": "string", "example": "Jane" },
             "event": { "$ref": "#/definitions/Event" },
+            "team": { "$ref": "#/definitions/Team" },
         }
     },
     "Organizer": {
@@ -72,7 +86,7 @@ All other objects are children of the Event.
         "properties": {
             "type": "object",
             "id": { "type": "string", "example": "1" },
-            "name": { "type": "string", "example": "John" },
+            "name": { "type": "string", "example": "Jude" },
             "event": { "$ref": "#/definitions/Event" },
         }
     }
