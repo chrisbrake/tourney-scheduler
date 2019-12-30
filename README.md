@@ -50,31 +50,31 @@ All other objects are children of the Event.
         }
     },
     "Keeper": {
-      "type": "object",
-      "properties": {
         "type": "object",
-        "id": { "type": "string", "example": "1" },
-        "name": { "type": "string", "example": "John" },
-        "event": { "$ref": "#/definitions/Event" },
-      }
+        "properties": {
+            "type": "object",
+            "id": { "type": "string", "example": "1" },
+            "name": { "type": "string", "example": "John" },
+            "event": { "$ref": "#/definitions/Event" },
+        }
     },
     "Competitor": {
-      "type": "object",
-      "properties": {
         "type": "object",
-        "id": { "type": "string", "example": "1" },
-        "name": { "type": "string", "example": "John" },
-        "event": { "$ref": "#/definitions/Event" },
-      }
+        "properties": {
+            "type": "object",
+            "id": { "type": "string", "example": "1" },
+            "name": { "type": "string", "example": "John" },
+            "event": { "$ref": "#/definitions/Event" },
+        }
     },
     "Organizer": {
-      "type": "object",
-      "properties": {
         "type": "object",
-        "id": { "type": "string", "example": "1" },
-        "name": { "type": "string", "example": "John" },
-        "event": { "$ref": "#/definitions/Event" },
-      }
+        "properties": {
+            "type": "object",
+            "id": { "type": "string", "example": "1" },
+            "name": { "type": "string", "example": "John" },
+            "event": { "$ref": "#/definitions/Event" },
+        }
     }
   }
 }
