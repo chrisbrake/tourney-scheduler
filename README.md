@@ -38,6 +38,7 @@ All other objects are children of the Event.
             "name": { "type": "string", "example": "Tournament of Champions" },
             "rounds": { "type": "array", "items": { "$ref": "#/definitions/Round" }, "default": [] }
         },
+    },
     "Round": {
         "type": "object",
         "properties": {
@@ -60,7 +61,6 @@ All other objects are children of the Event.
             "competitors": { "type": "array", "items": { "$ref": "#/definitions/Competitor" }, "default": [] },
             "event": { "$ref": "#/definitions/Event" },
         }
-    },
     },
     "Keeper": {
         "type": "object",
